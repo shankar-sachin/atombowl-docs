@@ -38,11 +38,42 @@ kbd { padding: 1px 7px; border: 1px solid var(--rule); border-bottom-width: 2px;
 .faq dt { margin-top: 20px; font-weight: 700; }
 .faq dd { margin: 4px 0 0; color: var(--muted); }
 footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+.bar-actions { display: flex; align-items: center; gap: 8px; }
+.icon-btn, .menu-btn { width: 44px; height: 44px; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; font: inherit; }
+.icon-btn { background: transparent; color: var(--text); }
+.icon-btn:hover { background: var(--plate); }
+.menu-btn { display: none; background: var(--text); color: var(--ink); }
+.toc-bar { display: none; }
+#searchPanel { position: fixed; inset: 0; z-index: 100; padding: 72px 16px 16px; background: color-mix(in srgb, var(--ink) 94%, transparent); backdrop-filter: blur(10px); overflow: auto; }
+#searchPanel[hidden] { display: none; }
+.search-box { display: flex; gap: 10px; align-items: center; max-width: 640px; margin: 0 auto; }
+#searchInput { flex: 1; min-width: 0; height: 52px; padding: 0 18px; border: 1px solid var(--rule); border-radius: 14px; background: var(--plate); color: var(--text); font: inherit; font-size: 1.1rem; }
+#searchInput:focus { outline: 2px solid var(--signal); outline-offset: 1px; }
+.search-close { height: 52px; padding: 0 16px; border: 1px solid var(--rule); border-radius: 14px; background: transparent; color: var(--muted); font: inherit; cursor: pointer; }
+.search-results { list-style: none; max-width: 640px; margin: 14px auto 0; padding: 0; display: grid; gap: 8px; }
+.search-results a { display: grid; gap: 2px; padding: 14px 16px; border: 1px solid var(--rule); border-radius: 14px; background: var(--plate); color: var(--text); text-decoration: none; }
+.search-results a:hover { border-color: var(--signal); }
+.search-results span { color: var(--muted); font-size: 0.9rem; }
+.search-results .none { color: var(--muted); text-align: center; padding: 20px; }
 @media (max-width: 800px) {
-  .layout { grid-template-columns: 1fr; gap: 20px; padding-top: 20px; }
-  .side { position: static; display: flex; flex-wrap: wrap; gap: 4px; }
+  .bar { height: 64px; }
+  .open-app { display: none; }
+  .menu-btn { display: grid; }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 24px; }
+  .side { display: none; }
+  body.nav-open .side { display: grid; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; z-index: 40; align-content: start; gap: 4px; padding: 16px; background: var(--ink); overflow: auto; }
+  body.nav-open { overflow: hidden; }
+  .side a { padding: 14px 14px; font-size: 1.15rem; }
+  .toc-bar { display: flex; align-items: center; gap: 14px; position: sticky; top: 64px; z-index: 30; padding: 10px 16px; background: color-mix(in srgb, var(--ink) 92%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+  .toc-btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid var(--rule); border-radius: 12px; background: var(--plate); color: var(--muted); font: inherit; font-size: 0.95rem; cursor: pointer; white-space: nowrap; }
+  .toc-btn[aria-expanded="true"] svg { transform: rotate(90deg); }
+  .toc-now { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.95rem; }
+  .toc-list { position: absolute; left: 16px; right: 16px; top: calc(100% + 6px); margin: 0; padding: 8px; list-style: none; border: 1px solid var(--rule); border-radius: 14px; background: var(--plate); box-shadow: 0 18px 48px rgb(4 9 20 / 0.4); max-height: 60vh; overflow: auto; }
+  .toc-list[hidden] { display: none; }
+  .toc-list a { display: block; padding: 12px 14px; border-radius: 10px; color: var(--text); text-decoration: none; }
+  .toc-list a:hover { background: var(--ink); }
   h1 { font-size: 2.4rem; }
+  h2 { scroll-margin-top: 130px; }
+  table { display: block; overflow-x: auto; }
 }
-.demo { display: block; width: 100%; height: auto; margin: 24px 0; border: 1px solid var(--rule); border-radius: 14px; }
-img { max-width: 100%; height: auto; }
-main { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 800px) { body.nav-open main { visibility: hidden; } }

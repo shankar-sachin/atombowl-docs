@@ -27,4 +27,4 @@ Every push to `main` deploys, and every pull request gets a preview URL.
 
 ## Contributing
 
-Open a pull request. Never push to `main`.
+Open a pull request. Never push to `main`. See [CONTRIBUTING.md](CONTRIBUTING.md).
