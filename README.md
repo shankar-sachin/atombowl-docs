@@ -28,3 +28,11 @@ Every push to `main` deploys, and every pull request gets a preview URL.
 ## Contributing
 
 Open a pull request. Never push to `main`. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Tour
+
+<p align="center">
+  <a href="https://github.com/shankar-sachin/atombowl-docs/blob/main/public/explainer.mp4">
+    <img src="public/tour-thumb.jpg" alt="Watch the 36-second Atom Bowl tour" width="720">
+  </a>
+</p>
