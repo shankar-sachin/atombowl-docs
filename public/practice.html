@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice | Atom Bowl Docs</title>
+  <meta name="description" content="How a practice run works: topics, buzzing, answer checking and scoring.">
+  <link rel="icon" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="/" aria-label="Atom Bowl Docs home"><img src="/images/logo.svg" alt="" width="32" height="32"><span>Atom Bowl Docs</span></a>
+    <a class="open-app" href="https://atombowl.web.app">Open Atom Bowl</a>
+  </header>
+  <div class="layout">
+    <nav class="side" aria-label="Documentation"><a href="/">Overview</a><a href="/practice" aria-current="page">Practice</a><a href="/question-bank">Question bank</a><a href="/learn">Learn</a><a href="/tutor-generate">Tutor and Generate</a><a href="/buzzer-rooms">Buzzer rooms and clock</a><a href="/account-settings">Account and settings</a><a href="/troubleshooting">Troubleshooting</a></nav>
+    <main>
+      <h1>Practice</h1>
+
+<p class="lead">Open <a href="https://atombowl.web.app/practice-home">Practice</a> from the home page, choose what to study, and play.</p>
+<h2>Starting a run</h2>
+<ol>
+  <li>Pick your supertopics and filters. <strong>Advanced filters</strong> opens 20+ subtopics.</li>
+  <li>Choose how long you get to buzz, or turn the timer off.</li>
+  <li>Pick a game mode and start.</li>
+</ol>
+<p>The moderator reads the question while the text types out. Buzz with <kbd>Space</kbd> or by clicking the question, then type your answer and press <kbd>Enter</kbd>. Multiple choice questions take <kbd>W</kbd> <kbd>X</kbd> <kbd>Y</kbd> <kbd>Z</kbd>.</p>
+<h2>Answer checking</h2>
+<p>Answers are graded in your browser by <strong>AtomCorrect</strong>, which forgives typos and spelling variants. Turn it off in Settings to mark your own answers with <kbd>R</kbd> (right) and <kbd>W</kbd> (wrong).</p>
+<h2>Scoring</h2>
+<table>
+  <thead><tr><th>Situation</th><th>Result</th></tr></thead>
+  <tbody>
+    <tr><td>Correct tossup</td><td>+4</td></tr>
+    <tr><td>Correct bonus</td><td>+10</td></tr>
+    <tr><td>Wrong after the question is fully read</td><td>No change</td></tr>
+    <tr><td>Wrong interrupt (before it is fully read)</td><td>-4</td></tr>
+  </tbody>
+</table>
+<p>Rounds alternate tossup and bonus. You get a few seconds to type after buzzing; it is longer than the official 2 seconds because typing is slower than speaking.</p>
+<h2>After a miss</h2>
+<ul>
+  <li><strong>Ask Tutor</strong> opens a chat that explains the question. See <a href="/tutor-generate">Tutor and Generate</a>.</li>
+  <li><strong>Look up the answer</strong> opens a web search built from the question's key words and the answer. Websites cannot read your browser's default search engine, so Atom Bowl guesses from your browser. Change it in Settings under <em>Look up answers with</em>.</li>
+  <li><strong>Send to Claude, ChatGPT or Gemini</strong> opens that app with the question and your answer. Choose the app in Settings under <em>Send missed questions to</em>. Gemini cannot be prefilled, so the prompt is copied for you to paste.</li>
+</ul>
+<h2>Keyboard shortcuts</h2>
+<table>
+  <thead><tr><th>Key</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr><td><kbd>Space</kbd></td><td>Buzz</td></tr>
+    <tr><td><kbd>Enter</kbd></td><td>Submit a short answer</td></tr>
+    <tr><td><kbd>W</kbd> <kbd>X</kbd> <kbd>Y</kbd> <kbd>Z</kbd></td><td>Choose an option</td></tr>
+    <tr><td><kbd>R</kbd> / <kbd>W</kbd></td><td>Mark right / wrong</td></tr>
+    <tr><td><kbd>N</kbd></td><td>Next question</td></tr>
+    <tr><td><kbd>Alt</kbd> <kbd>S</kbd></td><td>Stop reading and show the full text</td></tr>
+    <tr><td><kbd>Alt</kbd> <kbd>T</kbd></td><td>Read aloud on or off</td></tr>
+    <tr><td><kbd>Alt</kbd> <kbd>B</kbd></td><td>Buzz from anywhere</td></tr>
+    <tr><td><kbd>Alt</kbd> <kbd>F</kbd></td><td>Focus the answer box</td></tr>
+    <tr><td><kbd>Alt</kbd> <kbd>H</kbd></td><td>Show shortcuts</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Exit practice</td></tr>
+  </tbody>
+</table>
+
+      <footer>Edit these pages on <a href="https://github.com/shankar-sachin/atombowl-docs">GitHub</a>.</footer>
+    </main>
+  </div>
+</body>
+</html>
