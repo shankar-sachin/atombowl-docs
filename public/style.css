@@ -44,3 +44,5 @@ footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule);
   h1 { font-size: 2.4rem; }
 }
 .demo { display: block; width: 100%; height: auto; margin: 24px 0; border: 1px solid var(--rule); border-radius: 14px; }
+img { max-width: 100%; height: auto; }
+main { min-width: 0; overflow-wrap: anywhere; }
